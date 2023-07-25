@@ -15,7 +15,7 @@ function Register() {
         onSubmit : async (values) => {
             console.log(values)
             try {
-               const user = await axios.post(`${process.env.REACT_APP_BACKENDURL}/user/register`,values,{withCredentials:true})
+               const user = await axios.post(`${process.env.REACT_APP_BACKENDURL}/user/register`,values)
                if(user.data.message === "Success ceated"){
                 navigate("/")
                }else{
